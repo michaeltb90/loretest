@@ -1,0 +1,22 @@
+<%= form_with(model: sentience, local: true) do |form| %>
+  <% if sentience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sentience.errors.count, "error") %> prohibited this sentience from being saved:</h2>
+
+      <ul>
+      <% sentience.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :sentience_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

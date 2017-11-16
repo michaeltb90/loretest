@@ -1,0 +1,59 @@
+<%= form_with(model: character, local: true) do |form| %>
+  <% if character.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(character.errors.count, "error") %> prohibited this character from being saved:</h2>
+
+      <ul>
+      <% character.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :character_name %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :character_age %>
+  </div>
+
+  <div class="form-group">
+  <%= form.select :race_id, @races.collect { |c| [ c.name, c.id ]}, {include_blank: "Please select a race" } %>
+  </div>
+
+  <div class="form-group">
+  <%= form.select :gender_id, @genders.collect { |c| [ c.name, c.id ]}, {include_blank: "Please select a gender" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :birth_date %>
+    <%= form.number_field :birth_date, id: :character_birth_date %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :death_date %>
+    <%= form.number_field :death_date, id: :character_death_date %>
+  </div>
+
+  <div class="form-group">
+  <%= form.select :faction_id, @factions.collect { |c| [ c.name, c.id ]}, {include_blank: "Please select a faction" } %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :birth_location %>
+    <%= form.text_field :birth_location, id: :character_birth_location %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :character_bio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

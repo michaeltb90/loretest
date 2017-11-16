@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loretest</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="jumbotron">
+	  <h1 id="jumboi">Lore-Site</h1>
+	</div>
+
+	<div class="row"> 
+		<div class="col-md-1">
+			
+		</div>
+
+		<div class="col-md-1">
+			<h3><%= link_to "Home", root_path %></h3>
+		</div>
+
+		<div class="col-md-1">
+			
+		</div>
+
+		<div class="col-md-1">
+			<h3><%= link_to "Characters", characters_path %></h3>
+		</div>
+		
+		<div class="col-md-1">
+		</div>
+
+		<div class="col-md-1">
+			<h3><%= link_to "Timeline", events_path %></h3>
+		</div>
+
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-1">
+			
+		</div>
+		<div class="col-md-1">
+			<div class="pull-right">
+			  <% if user_signed_in? %>
+			    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
+			  <% end %>
+			</div>
+			
+		</div>
+		<div class="col-md-1">
+		</div>
+
+	</div>
+
+    <div class="container">
+    	<%= yield %>
+    </div>
+
+  </body>
+</html>
