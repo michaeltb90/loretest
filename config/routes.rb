@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'search_results' => 'search#search_results'
   get 'search/search_results' => 'search#search_results' 
 
-  get 'users/sign_out' => 'welcome#index'
+ 
 
 
  
