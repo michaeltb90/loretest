@@ -1,6 +1,8 @@
 class CharactersController < ApplicationController
   before_action :set_character, only: [:show, :edit, :update, :destroy]
 
+  before_action :authenticate_user!, except: [:show]
+
   # GET /characters
   # GET /characters.json
   def index

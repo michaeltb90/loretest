@@ -33,6 +33,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'hirb'
 gem 'devise'
+gem 'cancancan'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

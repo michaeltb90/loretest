@@ -9,17 +9,17 @@
   </head>
 
   <body>
-  	<div class="jumbotron">
+  	<div class="jumbotron" style="background-color: rgb(224, 213, 159);">
 	  <h1 id="jumboi">Lore-Site</h1>
 	</div>
 
-	<div class="row"> 
+	<div class="row" style="background-color: grey;"> 
 		<div class="col-md-1">
 			
 		</div>
 
 		<div class="col-md-1">
-			<h3><%= link_to "Home", root_path %></h3>
+			<h3><%= link_to "Home", root_path, :style => "color: white;"%></h3>
 		</div>
 
 		<div class="col-md-1">
@@ -27,14 +27,14 @@
 		</div>
 
 		<div class="col-md-1">
-			<h3><%= link_to "Characters", characters_path %></h3>
+			<h3><%= link_to "Characters", characters_path, :style => "color: white;" %></h3>
 		</div>
 		
 		<div class="col-md-1">
 		</div>
 
 		<div class="col-md-1">
-			<h3><%= link_to "Timeline", events_path %></h3>
+			<h3><%= link_to "Timeline", events_path, :style => "color: white;" %></h3>
 		</div>
 
 		<div class="col-md-1">
@@ -60,8 +60,39 @@
 
 	</div>
 
-    <div class="container">
-    	<%= yield %>
+	
+	<div style="background-color: rgb(224, 213, 159);">
+	    <div class="container">
+	    	<%= yield %>
+	    </div>
+    </div>
+
+    <div>
+    	 <footer style="background-color: rgb(37, 48, 38);">
+        <div class="container">
+          <div class="row">
+
+
+
+            <div class="col-md-2">
+              <p style="color:rgb(149, 173,153);">fjiehafeihaiefhiahef
+                ieahfliehaeih
+                feihaifehiale
+                aiefhliahfleiahfleifh
+              </p>
+            </div>
+
+            <div class="col-md-6">
+            </div>
+
+            <div class="col-md-4">
+            </div>  
+            
+            
+          
+          </div>
+        </div>
+      </footer>
     </div>
 
   </body>
