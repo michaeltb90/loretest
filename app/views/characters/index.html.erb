@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Characters</h1>
-<!--
+<h1>Characters!</h1>
+
 <table>
   <thead>
     <tr>
@@ -30,16 +30,16 @@
         <td><%= character.faction.name %></td>
         <td><%= character.birth_location %></td>
         <td><%= character.bio %></td>
-        <% if can? :update, character %>
+        <!--<% if can? :update, character %>-->
           <p><%= link_to 'Show', character %></p>
           <p><%= link_to 'Edit', edit_character_path(character) %></p>
           <p><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-        <% end %>
+        <!--<% end %>-->
       </tr>
     <% end %>
   </tbody>
 </table>
--->
+
 <br>
 
   
@@ -47,7 +47,7 @@
 <%= link_to 'New Character', new_character_path %>
 <!--<% end %>-->
 
-
+<!--
   <% @characters.each do |character| %>
     <div class="card" style="width: 20rem;">
       
@@ -64,6 +64,6 @@
     </div>
   <% end %>
 
-
+-->
       
     
